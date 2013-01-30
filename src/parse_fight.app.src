@@ -1,0 +1,12 @@
+{application, parse_fight,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { parse_fight_app, []}},
+  {env, []}
+ ]}.
