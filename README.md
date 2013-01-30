@@ -1,8 +1,8 @@
 # Parse Fight
 
 This project is a demonstration of a
-[autohelp](https://github.com/stolen/autohelp) crash when lager is enabled in
-the build. It's a default rebar/erlang project. Run
+[autohelp](https://github.com/stolen/autohelp) crash on build. It's a default
+rebar/erlang project. Run
 
     ./rebar get-deps
     ./rebar compile
@@ -10,36 +10,20 @@ the build. It's a default rebar/erlang project. Run
 to reproduce. From my own system:
 
 ```
-> ./rebar clean
-==> parse_fight (clean)
+> erl
+Erlang R15B02 (erts-5.9.2) [source] [64-bit] [smp:8:8] [async-threads:0] [hipe] [kernel-poll:false]
 
-> ./rebar get-deps
+Eshell V5.9.2  (abort with ^G)
+1> q().
+ok
+
+> yes | rm -rf deps && ./rebar clean && ./rebar get-deps && ./rebar compile
+==> parse_fight (clean)
 ==> parse_fight (get-deps)
-Pulling lager from {git,"git://github.com/basho/lager.git",{tag,"1.2.0"}}
-Cloning into 'lager'...
 Pulling autohelp from {git,"git://github.com/stolen/autohelp.git",
                            {tag,"ec1d45fe"}}
 Cloning into 'autohelp'...
-==> lager (get-deps)
 ==> autohelp (get-deps)
-
-> ./rebar compile
-==> lager (compile)
-Compiled src/lager_util.erl
-Compiled src/lager_transform.erl
-Compiled src/lager_sup.erl
-Compiled src/lager_mochiglobal.erl
-Compiled src/lager_handler_watcher_sup.erl
-Compiled src/lager_handler_watcher.erl
-Compiled src/lager_trunc_io.erl
-Compiled src/lager_stdlib.erl
-Compiled src/lager_crash_log.erl
-Compiled src/lager_format.erl
-Compiled src/lager_file_backend.erl
-Compiled src/lager_app.erl
-Compiled src/lager_console_backend.erl
-Compiled src/lager.erl
-Compiled src/error_logger_lager_h.erl
 ==> autohelp (compile)
 /Users/blt/projects/com/rackspace/parse_fight/deps/autohelp/src/autohelp.erl:none: error in parse transform 'autohelp': {undef,
                                       [{autohelp,parse_transform,
@@ -930,7 +914,6 @@ Compiled src/error_logger_lager_h.erl
                                           warn_obsolete_guard,
                                           warn_unused_import,warn_shadow_vars,
                                           warn_export_vars,warn_export_all,
-                                          {parse_transform,lager_transform},
                                           {parse_transform,autohelp},
                                           {i,"include"},
                                           return_errors,return_warnings]],
