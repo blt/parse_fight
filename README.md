@@ -14,7 +14,7 @@ to reproduce. From my own system:
 ==> parse_fight (clean)
 ==> parse_fight (get-deps)
 Pulling autohelp from {git,"git://github.com/stolen/autohelp.git",
-                           {tag,"1f3b65931cdf7007d13d3284242359758657aca6"}}
+                           {tag,"a6a688a11c3e6923cb4ff7be7b06b349e3ed2cf4"}}
 Cloning into 'autohelp'...
 Pulling bson from {git,"git://github.com/mongodb/bson-erlang.git",
                        {tag,"17373ef4"}}
@@ -39,15 +39,17 @@ Compiled src/mvar.erl
 Compiled src/mongodb_app.erl
 Compiled src/mongo_query.erl
 Compiled src/mongo_replset.erl
-Compiled src/mongodb_tests.erl
 Compiled src/mongo_protocol.erl
+Compiled src/mongodb_tests.erl
 Compiled src/mongo_cursor.erl
 Compiled src/mongo_connect.erl
 Compiled src/mongo.erl
 ==> parse_fight (compile)
-Compiled src/parse_fight_sup.erl
-Compiled src/parse_fight_app.erl
-src/db_wrapper.erl: at line 19: syntax error before: ';'
-src/db_wrapper.erl:none: error in parse transform 'autohelp': error
+src/behave.erl:0: attribute 'export' after function definitions
+src/behave.erl:0: Warning: function '__autohelp_fun_desc'/0 is unused
+src/behave.erl:0: Warning: function '__autohelp_pad_text_left'/2 is unused
+src/behave.erl:0: Warning: function help/0 is unused
+src/behave.erl:0: Warning: function help/1 is unused
+src/behave.erl:0: Warning: function help/2 is unused
 ERROR: compile failed while processing /Users/blt/projects/com/rackspace/parse_fight: rebar_abort
 ```
