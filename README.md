@@ -14,7 +14,7 @@ to reproduce. From my own system:
 ==> parse_fight (clean)
 ==> parse_fight (get-deps)
 Pulling autohelp from {git,"git://github.com/stolen/autohelp.git",
-                           {tag,"a6a688a11c3e6923cb4ff7be7b06b349e3ed2cf4"}}
+                           {tag,"198a908d6fca517fd9da8c9a2335fd28baaaef4b"}}
 Cloning into 'autohelp'...
 Pulling bson from {git,"git://github.com/mongodb/bson-erlang.git",
                        {tag,"17373ef4"}}
@@ -30,26 +30,29 @@ Compiled src/autohelp.erl
 Compiled src/autohelp_lib.erl
 Compiled src/autohelp_demo.erl
 ==> bson (compile)
+src/bson_binary.erl: at line 6: can't find include file "bson_binary.hrl"
+autohelp: edoc:get_doc crashed with exit:error on src/bson_binary.erl
+autohelp WARNING: cannot retrieve documentation from src/bson_binary.erl. Run edoc:get_doc("src/bson_binary.erl") manually to investigate problem
+Compiled src/bson_binary.erl
 Compiled src/bson_tests.erl
 Compiled src/bson.erl
-Compiled src/bson_binary.erl
 ==> mongodb (compile)
 Compiled src/resource_pool.erl
-Compiled src/mvar.erl
 Compiled src/mongodb_app.erl
+Compiled src/mvar.erl
 Compiled src/mongo_query.erl
 Compiled src/mongo_replset.erl
-Compiled src/mongo_protocol.erl
 Compiled src/mongodb_tests.erl
+Compiled src/mongo_protocol.erl
 Compiled src/mongo_cursor.erl
 Compiled src/mongo_connect.erl
 Compiled src/mongo.erl
 ==> parse_fight (compile)
-src/behave.erl:0: attribute 'export' after function definitions
-src/behave.erl:0: Warning: function '__autohelp_fun_desc'/0 is unused
-src/behave.erl:0: Warning: function '__autohelp_pad_text_left'/2 is unused
-src/behave.erl:0: Warning: function help/0 is unused
-src/behave.erl:0: Warning: function help/1 is unused
-src/behave.erl:0: Warning: function help/2 is unused
-ERROR: compile failed while processing /Users/blt/projects/com/rackspace/parse_fight: rebar_abort
+Compiled src/behave.erl
+src/db_wrapper.erl: at line 2: can't find include lib "include/fight.hrl"
+autohelp: edoc:get_doc crashed with exit:error on src/db_wrapper.erl
+autohelp WARNING: cannot retrieve documentation from src/db_wrapper.erl. Run edoc:get_doc("src/db_wrapper.erl") manually to investigate problem
+Compiled src/parse_fight_sup.erl
+Compiled src/parse_fight_app.erl
+Compiled src/db_wrapper.erl
 ```

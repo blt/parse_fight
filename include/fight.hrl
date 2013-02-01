@@ -1,0 +1,1 @@
+-define(boots, comfortable).

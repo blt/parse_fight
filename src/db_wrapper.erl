@@ -1,4 +1,5 @@
 -module(db_wrapper).
+-include_lib("include/fight.hrl").
 
 %% API
 -export([find/2, find/3]).
