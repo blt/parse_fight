@@ -24,6 +24,14 @@
 %%% API
 %%%===================================================================
 
+%%-----------------------------------------------------------------------------
+%% @doc Your description goes here
+%%
+%% Your longer explanation goes here. Include multiple paragraphs and an
+%% example or two.
+%%
+%% @end
+%%-----------------------------------------------------------------------------
 find(Collection, Selector) when is_tuple(Selector) ->
     {ok, Docs} = do(safe, slave_ok,
         fun() ->
